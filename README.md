@@ -1,12 +1,20 @@
 # coding-skill
 
-0 jdk8到jdk21的所有新特性,尽量激进的使用
-1 要使用lombok, 可以参考其他模块的用法. 
-2 校验用jsr303, message.proerties不要忘记加上对应的异常信息
-3 尽量只使用hutool工具类, 如果hutool中没有合适的工具,请立即汇报给我
-4 属性映射尽量使用mapstruct
-5 基础校验放在controller中, 业务校验,数据库校验放在service中
-6 要注意数据库事务的使用 
-7 业务异常使用Throws工具类和BizException
-8 @Bean注解尽量使用方法名作为bean的名称
-9 禁止使用var来声明变量
+技术实现核心三要素:  简单合适可扩展
+
+0 jdk8到jdk21的所有新特性.
+1 要使用lombok, 可以参考其他模块的用法.
+2 校验用jsr303, message.proerties不要忘记加上对应的异常信息.
+3 尽量只使用hutool工具类, 如果hutool中没有合适的工具,请立即汇报给我.通用工具最好不用spring自己的工具类
+4 属性映射尽量使用mapstruct.
+5 基础校验放在controller中, 业务校验,数据库校验放在service中.
+6 要注意数据库事务的使用.
+7 业务异常使用Throws工具类和BizException.
+8 @Bean注解尽量使用方法名作为bean的名称.
+9 禁止使用var来声明变量.
+10 禁止注入配置类, 所有的业务XxxProperties都是通过静态引用的REF来暴漏.
+11 在不破坏语义的情况下, 尽量使用静态导入.
+12 造轮子是一件非常谨慎的事情!在造轮子之前请一定要确认三方工具中没有该实现.
+13 所有可能返回null的方法, 请用spring的@Nullable注解来打上标记.
+14 所有代码能对齐的尽量对齐,对齐可以极大提升可读性
+15 开发环境对安全的要求比较低, 不要提前对安全性进行优化
