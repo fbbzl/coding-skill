@@ -71,3 +71,19 @@
 1. 使用延迟格式化 `logger.info("msg: %s", val)`，不使用 f-string
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
+
+## Python 特色最佳实践
+
+0. 使用 pathlib 替代 os.path 处理路径
+1. 使用 context managers（`with`）管理资源
+2. 用 dataclasses / pydantic 替代手写 __init__
+3. 优先使用 list/dict comprehensions，但不超过两层
+4. 异步代码统一使用 asyncio，不混用同步阻塞库
+
+## 常见陷阱
+
+0. 可变默认参数：`def f(x=[])` 会共享同一个列表
+1. 在循环中修改正在遍历的 dict/list
+2. 用 `==` 比较浮点数，金额用 Decimal
+3. 全局 import * 污染命名空间
+4. 忽略 `asyncio.gather` 中异常的传播

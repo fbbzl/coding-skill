@@ -72,3 +72,19 @@
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
 4. 禁止使用 console.log 作为正式日志（仅限调试）
+
+## TypeScript 特色最佳实践
+
+0. 使用 discriminated union 替代可选字段堆砌
+1. 优先使用 async/await 而非 Promise 链式调用
+2. 用 Zod 做运行时校验，而不仅是编译时类型
+3. 避免 class 滥用，优先使用函数 + 接口
+4. 使用 never 和 exhaustive switch 处理所有分支
+
+## 常见陷阱
+
+0. `typeof x === 'object'` 会包含 null
+1. JSON.parse 后没有类型校验
+2. 在 async 函数中未 await 就返回
+3. Date 对象可变性导致意外修改
+4. `any` 绕过类型检查引入运行时错误

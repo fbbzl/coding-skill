@@ -71,3 +71,19 @@
 1. 入口方法记录入参，异常路径记录完整上下文
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
+
+## Kotlin 特色最佳实践
+
+0. 使用协程处理异步和并发，不用回调地狱
+1. Flow 用于响应式数据流
+2. 使用 sealed class 表示受限类型层次
+3. data class 用于不可变 DTO
+4. 使用 apply/with/let/run 提高可读性，但避免嵌套过深
+
+## 常见陷阱
+
+0. !! 断言空指针导致 NPE
+1. 在协程中捕获 CancellationException 会阻止正常取消
+2. lateinit 变量未初始化就访问
+3. 在 data class 中使用 var 破坏不可变性
+4. 默认参数在 Java 调用方不可见

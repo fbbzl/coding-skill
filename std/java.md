@@ -67,3 +67,19 @@
 1. 入口方法记录入参，异常路径记录完整上下文
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
+
+## Java 特色最佳实践
+
+0. Stream API 用于集合转换，避免嵌套循环
+1. Optional 用于可能为空的方法链，禁止 `Optional.get()` 裸用
+2. CompletableFuture / virtual threads（JDK 21+）处理并发，不裸用 Thread
+3. record 用于 DTO，减少样板代码
+4. switch expression 替代多分支 if-else
+
+## 常见陷阱
+
+0. 在 @Transactional 中调用外部 HTTP 服务会拉长事务
+1. 在 Bean 的 @PostConstruct 中做重 IO 会拖慢启动
+2. 字段注入难以测试，优先构造函数注入
+3. `==` 比较对象引用，值比较用 equals
+4. SimpleDateFormat 非线程安全，使用 DateTimeFormatter

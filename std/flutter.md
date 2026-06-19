@@ -69,3 +69,12 @@
 2. 避免在 build 中做重计算
 3. 使用 const 减少重建
 4. 启动时间优化
+
+## 常见陷阱
+
+0. setState 调用导致整树重建，未拆分 Widget
+1. 在 build 方法中创建对象/回调
+2. 未正确处置 TextEditingController 等控制器
+3. 异步操作完成后 Widget 已 dispose
+4. context 跨 Navigator 使用错误
+5. 图片资源未适配不同分辨率

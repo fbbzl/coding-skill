@@ -69,3 +69,12 @@
 1. 静态文件使用 collectstatic
 2. 环境变量管理 SECRET_KEY 等敏感配置
 3. 数据库迁移在部署前执行
+
+## 常见陷阱
+
+0. N+1 查询：使用 select_related / prefetch_related
+1. 在信号量中做重逻辑影响性能
+2. 模板中直接写数据库查询导致难以追踪
+3. 未关闭 QuerySet 惰性求值导致意外查询
+4. settings.SECRET_KEY 硬编码在代码中
+5. 在生产环境开启 DEBUG

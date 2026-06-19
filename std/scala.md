@@ -71,3 +71,19 @@
 1. 入口方法记录入参，异常路径记录完整上下文
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
+
+## Scala 特色最佳实践
+
+0. 使用 for-comprehension 组合 Option/Either/Future
+1. 优先使用不可变集合
+2. 使用 case class + pattern matching 建模领域状态
+3. 类型类（type class）替代 ad-hoc 多态
+4. 用 ZIO/Cats Effect 管理副作用
+
+## 常见陷阱
+
+0. 在 Future 中隐式使用全局 ExecutionContext
+1. 用 null 绕过类型系统
+2. 隐式转换滥用导致代码难以理解
+3. 在并发集合上使用可变状态
+4. 尾递归未加 @tailrec 导致栈溢出

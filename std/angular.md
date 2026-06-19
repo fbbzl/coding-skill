@@ -69,3 +69,12 @@
 1. 使用 async pipe 订阅 Observable
 2. 避免在模板中调用函数
 3. 不可变数据更新
+
+## 常见陷阱
+
+0. 在模板中订阅 Observable 未取消导致内存泄漏
+1. 在 ngOnInit 中直接修改 @Input 数据
+2. 服务未正确提供导致注入失败
+3. 表单控件 valueChanges 未 takeUntil 销毁
+4. 路由参数订阅未取消
+5. Zone.js 外部修改未触发变更检测

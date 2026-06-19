@@ -71,3 +71,19 @@
 1. 入口方法记录入参，异常路径记录完整上下文
 2. 禁止在循环中打印日志
 3. 敏感信息脱敏后再打印
+
+## C# 特色最佳实践
+
+0. 使用 LINQ 进行集合操作，避免手写循环
+1. 使用 async/await 处理异步，不阻塞线程
+2. 使用 record 或 readonly struct 减少可变状态
+3. 使用依赖注入管理生命周期
+4. 使用 Nullable Reference Types 明确可空性
+
+## 常见陷阱
+
+0. async void 只用于事件处理器，其他情况用 async Task
+1. 在 using 语句中未 await 就释放 DbContext
+2. LINQ 延迟执行导致多次查询数据库
+3. 捕获异常后丢失原始堆栈（应使用 throw 或 ExceptionDispatchInfo）
+4. 值类型装箱导致性能问题

@@ -71,3 +71,12 @@
 1. Props 类型完整
 2. API 响应类型统一定义
 3. 避免 any，用 unknown 兜底
+
+## 常见陷阱
+
+0. useEffect 依赖数组不完整导致 stale closure
+1. 在 render 中创建新函数/对象导致子组件重渲染
+2. state 异步更新，基于旧 state 计算需用函数式更新
+3. 事件处理中直接修改 state 对象
+4. useMemo/useCallback 滥用反而增加开销
+5. 路由参数未做类型校验和安全处理

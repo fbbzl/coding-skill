@@ -1,0 +1,82 @@
+# coding-skill
+
+本仓库是集体的编码纪律、工程标准和 AI 子代理协作剧本的知识库。
+
+## 目录说明
+
+| 目录 | 用途 |
+|---|---|
+| `std/` | 编码标准与工程规范，按语言、框架、领域分类 |
+| `skills/` | AI 子代理（req/dev/cr/qa/dp）的协作剧本与流程 |
+
+## 文件优先级
+
+当本仓库规则与外部规则冲突时，优先级如下：
+
+```
+项目规则 / 用户指令 / AGENTS.md > 本仓库标准（std/）> 通用工程常识
+```
+
+## 如何使用
+
+- 写 Java 项目：先看 `std/general.md`，再看 `std/java.md`，如果是 Spring Boot 项目加看 `std/spring.md`
+- 写 API：参考 `std/api-design.md` + 语言标准
+- 做代码审查：参考 `std/code-review.md` + `skills/cr.md`
+- 需求分析：参考 `skills/req.md`，完整流程见 `skills/survey-corps.md`
+- 全流程协作：参考 `skills/survey-corps.md`
+
+## std/ 文件索引
+
+### 通用跨领域标准
+
+- `std/general.md` — 通用编码原则
+- `std/api-design.md` — API 设计规范
+- `std/database.md` — 数据库设计规范
+- `std/security.md` — 安全规范
+- `std/testing.md` — 测试规范
+- `std/git.md` — Git 使用规范
+- `std/code-review.md` — 代码审查清单
+- `std/frontend.md` — 前端开发规范
+- `std/devops.md` — DevOps 规范
+- `std/logging.md` — 日志与可观测性规范
+
+### 语言标准
+
+- `std/java.md`
+- `std/python.md`
+- `std/go.md`
+- `std/rust.md`
+- `std/typescript.md`
+- `std/csharp.md`
+- `std/cpp.md`
+- `std/kotlin.md`
+- `std/scala.md`
+
+### 框架标准
+
+- `std/spring.md`
+- `std/django.md`
+- `std/fastapi.md`
+- `std/nestjs.md`
+- `std/react.md`
+- `std/vue.md`
+- `std/angular.md`
+- `std/flutter.md`
+
+## skills/ 文件索引
+
+- `skills/survey-corps.md` — 调查兵团完整协作流程
+- `skills/openspec.md` — OpenSpec 使用协议
+- `skills/req.md` — 需求代理剧本
+- `skills/dev.md` — 开发代理剧本
+- `skills/cr.md` — 代码审查代理剧本
+- `skills/qa.md` — 测试代理剧本
+- `skills/dp.md` — 部署代理剧本
+
+## 维护原则
+
+- 新增标准时，保持与现有文件格式一致
+- 跨语言通用的规则优先放在 `std/general.md`
+- 框架特定的规则放在 `std/<framework>.md`
+- 语言标准文件引用通用标准，避免重复描述
+- 技能文件保持精炼，完整流程以 `survey-corps.md` 为准
