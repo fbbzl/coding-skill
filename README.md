@@ -4,12 +4,12 @@
 
 ## 目录说明
 
-> 注意：`skills/` 目录下同时包含本仓库自研的 `.md` 剧本文件，以及通过 `git submodule` 引入的外部 skill。外部 skill 位于子目录中，使用前需执行 `git submodule update --init --recursive`。
+> 注意：`skills/` 目录下同时包含本仓库自研 skill 和外部 skill 副本。每个 skill 占一个子目录，以 `SKILL.md` 为入口（opencode 发现规范）。外部 skill 不再使用 git submodule，直接以源码形式纳入仓库。
 
 | 目录 | 用途 |
 |---|---|
 | `std/` | 编码标准与工程规范，按语言、框架、领域分类 |
-| `skills/` | AI 子代理协作剧本与流程，含自研 `.md` 和外部 skill 子模块 |
+| `skills/` | AI 子代理协作剧本与流程，含自研 skill 和外部 skill 副本 |
 
 ## 文件优先级
 
@@ -23,9 +23,9 @@
 
 - 写 Java 项目：先看 `std/general.md`，再看 `std/java.md`，如果是 Spring Boot 项目加看 `std/spring.md`
 - 写 API：参考 `std/api-design.md` + 语言标准
-- 做代码审查：参考 `std/code-review.md` + `skills/cr.md`
-- 需求分析：参考 `skills/req.md`，完整流程见 `skills/survey-corps.md`
-- 全流程协作：参考 `skills/survey-corps.md`
+- 做代码审查：参考 `std/code-review.md` + `skills/cr/SKILL.md`
+- 需求分析：参考 `skills/req/SKILL.md`，完整流程见 `skills/survey-corps/SKILL.md`
+- 全流程协作：参考 `skills/survey-corps/SKILL.md`
 
 ## std/ 文件索引
 
@@ -67,21 +67,26 @@
 
 ## skills/ 文件索引
 
-- `skills/survey-corps.md` — 调查兵团完整协作流程
-- `skills/openspec.md` — OpenSpec 使用协议
-- `skills/req.md` — 需求代理剧本
-- `skills/dev.md` — 开发代理剧本
-- `skills/cr.md` — 代码审查代理剧本
-- `skills/qa.md` — 测试代理剧本
-- `skills/dp.md` — 部署代理剧本
+所有 skill 遵循 opencode 发现规范：每个 skill 一个目录，内含 `SKILL.md`（带 YAML frontmatter 的 `name` + `description`）。详见 [opencode skills 文档](https://opencode.ai/docs/skills/)。
 
-### 外部 skill 子模块
+### 自研 skill
 
-- `skills/work-journal-skill/` — AI 编码会话转结构化工作日志
-- `skills/anyviz/` — AI 时代数据可视化规范与工作流库
-- `skills/sofagent/` — 约束 Agent 行为、拆解复杂任务、沉淀错误教训
-- `skills/humanai/` — 机器生成文本人类化改写
-- `skills/okf-frontmatter/` — Open Knowledge Format 文档 skill
+- `skills/survey-corps/SKILL.md` — 调查兵团完整协作流程
+- `skills/openspec/SKILL.md` — OpenSpec 使用协议
+- `skills/req/SKILL.md` — 需求代理剧本
+- `skills/dev/SKILL.md` — 开发代理剧本
+- `skills/cr/SKILL.md` — 代码审查代理剧本
+- `skills/qa/SKILL.md` — 测试代理剧本
+- `skills/dp/SKILL.md` — 部署代理剧本
+- `skills/grill-with-docs/SKILL.md` — grill-me 替代方案，结合文档上下文做决策树追问
+
+### 外部 skill
+
+- `skills/work-journal/SKILL.md` — AI 编码会话转结构化工作日志
+- `skills/anyviz/SKILL.md` — AI 时代数据可视化规范与工作流库
+- `skills/sofagent/SKILL.md` — 约束 Agent 行为、拆解复杂任务、沉淀错误教训
+- `skills/humanai/SKILL.md` — 机器生成文本人类化改写
+- `skills/okf-frontmatter/SKILL.md` — Open Knowledge Format 文档 skill
 
 ## 维护原则
 
@@ -89,4 +94,4 @@
 - 跨语言通用的规则优先放在 `std/general.md`
 - 框架特定的规则放在 `std/<framework>.md`
 - 语言标准文件引用通用标准，避免重复描述
-- 技能文件保持精炼，完整流程以 `survey-corps.md` 为准
+- 技能文件保持精炼，完整流程以 `skills/survey-corps/SKILL.md` 为准
