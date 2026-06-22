@@ -4,10 +4,12 @@
 
 ## 目录说明
 
+> 注意：`skills/` 目录下同时包含本仓库自研的 `.md` 剧本文件，以及通过 `git submodule` 引入的外部 skill。外部 skill 位于子目录中，使用前需执行 `git submodule update --init --recursive`。
+
 | 目录 | 用途 |
 |---|---|
 | `std/` | 编码标准与工程规范，按语言、框架、领域分类 |
-| `skills/` | AI 子代理（req/dev/cr/qa/dp）的协作剧本与流程 |
+| `skills/` | AI 子代理协作剧本与流程，含自研 `.md` 和外部 skill 子模块 |
 
 ## 文件优先级
 
@@ -72,6 +74,14 @@
 - `skills/cr.md` — 代码审查代理剧本
 - `skills/qa.md` — 测试代理剧本
 - `skills/dp.md` — 部署代理剧本
+
+### 外部 skill 子模块
+
+- `skills/work-journal-skill/` — AI 编码会话转结构化工作日志
+- `skills/anyviz/` — AI 时代数据可视化规范与工作流库
+- `skills/sofagent/` — 约束 Agent 行为、拆解复杂任务、沉淀错误教训
+- `skills/humanai/` — 机器生成文本人类化改写
+- `skills/okf-frontmatter/` — Open Knowledge Format 文档 skill
 
 ## 维护原则
 
