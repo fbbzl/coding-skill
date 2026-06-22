@@ -1,3 +1,13 @@
+---
+name: req
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "产品经理、业务分析师和业务建模负责人剧本"
+tags: [req, product, agent, workflow]
+author: coding-skill
+---
+
 # req 子代理剧本
 
 ## 角色定位

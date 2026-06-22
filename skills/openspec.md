@@ -1,3 +1,13 @@
+---
+name: openspec
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "新增模块、API、数据库等重大变更前的方案对齐协议"
+tags: [dev, specification, agent, workflow]
+author: coding-skill
+---
+
 # OpenSpec 使用协议
 
 ## 何时必须使用 OpenSpec

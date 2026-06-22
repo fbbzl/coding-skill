@@ -1,3 +1,13 @@
+---
+name: grill-with-docs
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "基于文档的高风险问题轻量澄清方案，替代 grill me"
+tags: [req, clarification, agent, workflow]
+author: coding-skill
+---
+
 # grill-with-docs
 
 > **本项目禁止使用 `grill me`。统一使用 `grill-with-docs` 进行高风险问题澄清。**

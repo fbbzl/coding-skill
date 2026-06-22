@@ -1,3 +1,13 @@
+---
+name: cr
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "代码审查、设计审查、数据库审查和 API 联调专家剧本"
+tags: [cr, code-review, agent, workflow]
+author: coding-skill
+---
+
 # cr 子代理剧本
 
 ## 角色定位

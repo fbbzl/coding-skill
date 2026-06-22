@@ -1,3 +1,13 @@
+---
+name: dev
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "全栈开发负责人剧本，统一承担前后端职责"
+tags: [dev, fullstack, agent, workflow]
+author: coding-skill
+---
+
 # dev 子代理剧本
 
 ## 角色定位

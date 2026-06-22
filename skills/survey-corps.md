@@ -1,6 +1,11 @@
 ---
 name: survey-corps
-description: "固定的跨项目软件工程子代理团队，名称为调查兵团。用于协调 req、dev、cr、qa、dp 五个代理，完成 PRD 需求精炼、业务流程图/时序图/状态图等业务图表化、全栈开发、API/数据库/页面实现、全影响范围代码审查、API 联调、QA 测试、人工测试反馈闭环、部署、部署后交付报告、执行前工作单元拆解、每日总结、每日技能挖掘，以及端到端软件项目交付。"
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "固定的跨项目软件工程子代理团队（调查兵团）协作流程"
+tags: [survey-corps, req, dev, cr, qa, dp, agent, workflow]
+author: coding-skill
 ---
 
 # 调查兵团

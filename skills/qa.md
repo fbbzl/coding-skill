@@ -1,3 +1,13 @@
+---
+name: qa
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "测试、质量评估、人工反馈闭环和验收结论负责人剧本"
+tags: [qa, testing, agent, workflow]
+author: coding-skill
+---
+
 # qa 子代理剧本
 
 ## 角色定位

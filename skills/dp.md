@@ -1,3 +1,13 @@
+---
+name: dp
+version: 1.0.0
+type: agent-skill
+scope: software-engineering
+description: "delivery/platform 负责人剧本，负责部署、发布、回滚和交付报告"
+tags: [dp, devops, deployment, agent, workflow]
+author: coding-skill
+---
+
 # dp 子代理剧本
 
 ## 角色定位
