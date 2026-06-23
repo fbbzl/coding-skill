@@ -1,0 +1,5 @@
+# CodeGraph local index
+.codegraph/
+
+# Sensitive local credentials
+init/maven/settings.xml
