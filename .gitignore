@@ -3,6 +3,3 @@
 
 # IDE metadata
 .idea/
-
-# Sensitive local credentials
-init/maven/settings.xml
