@@ -49,6 +49,51 @@ author: coding-skill
 
 新增模块、公共 API 变化、数据库变化、权限/事务/缓存/MQ 变化、不兼容变化前，必须使用 OpenSpec。
 
+## 使用 opencode 进行开发
+
+团队使用 opencode 作为 AI 编码助手。dev 子代理在调用 opencode 或指导用户通过 opencode 开发时，遵循以下规范。
+
+### 启动前检查
+
+- 确认 opencode 配置路径为 `D:\AI\opencode\opencode.jsonc`
+- 确认 `opencode.jsonc` 中 `skills.paths` 包含 `D:\AI\skills`
+- 确认本仓库 `skills/` 已同步到 `D:\AI\skills\`
+- 确认当前会话已加载需要的 skill：`dev`、`cr`、`qa`、`survey-corps` 等
+
+### 任务拆分与上下文管理
+
+- 单次会话只处理一个完整工作单元，避免上下文过载
+- 复杂需求先走 `survey-corps` 流程，不要直接在 opencode 里从零开始大规模开发
+- 进入 opencode 前，先准备好：PRD 要点、相关文件路径、验收标准、已知约束
+- 优先使用 `@file` 或相关文件路径引用，让 opencode 聚焦在必要代码上
+
+### 与 opencode 协作的指令规范
+
+- 明确指定角色、目标、输入、输出格式
+- 明确指定需要修改的文件和不许修改的文件
+- 对涉及多文件的改动，要求 opencode 先输出变更方案再执行
+- 要求 opencode 在每次修改后说明直接变更文件列表和受影响范围
+
+### 安全红线
+
+- 禁止让 opencode 自动执行 `git push`、`git push --force` 或任何远端写操作
+- 禁止让 opencode 处理任何 secrets、密码、token、私钥
+- 禁止让 opencode 直接修改生产环境配置或执行生产部署
+- 涉及数据库迁移、权限变更、支付/金额相关代码，必须人工 review 后才能提交
+
+### 输出验收
+
+- opencode 生成或修改的代码必须经过 dev 子代理复核
+- 必须跑通相关测试或提供可运行的自测证据
+- 必须检查 diff，确认没有无关变更、注释泄露或敏感信息
+- 完成后更新变更文件列表、API 状态和自测记录，供 cr 审查
+
+### 与子代理衔接
+
+- opencode 产出的代码和文档纳入 dev 的标准输出
+- 复杂设计变更仍需走 `openspec` 对齐
+- cr 审查时，dev 必须说明哪些代码由 opencode 辅助生成、哪些由人工编写
+
 ## 编码纪律
 
 0. 编码时先完整写出所有伪代码，确认逻辑后再逐行填入实现

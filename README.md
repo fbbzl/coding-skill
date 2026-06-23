@@ -73,12 +73,16 @@
 
 - `skills/survey-corps/SKILL.md` — 调查兵团完整协作流程
 - `skills/openspec/SKILL.md` — OpenSpec 使用协议
-- `skills/req/SKILL.md` — 需求代理剧本
-- `skills/dev/SKILL.md` — 开发代理剧本
-- `skills/cr/SKILL.md` — 代码审查代理剧本
-- `skills/qa/SKILL.md` — 测试代理剧本
+- `skills/req/SKILL.md` — 需求代理剧本（含 AI 辅助文档能力）
+- `skills/dev/SKILL.md` — 开发代理剧本（含 opencode 开发规范）
+- `skills/cr/SKILL.md` — 代码审查代理剧本（含 AI 辅助审查）
+- `skills/qa/SKILL.md` — 测试代理剧本（含 AI 辅助测试生成）
 - `skills/dp/SKILL.md` — 部署代理剧本
 - `skills/grill-with-docs/SKILL.md` — grill-me 替代方案，结合文档上下文做决策树追问
+- `skills/mcp-server-dev/SKILL.md` — MCP Server 开发规范
+- `skills/ai-memory/SKILL.md` — AI 跨会话记忆管理
+- `skills/prompt-engineering-for-coding/SKILL.md` — 编码场景 Prompt 工程
+- `skills/codebase-rag/SKILL.md` — 代码库 RAG 上下文工程
 
 ### 外部 skill
 
