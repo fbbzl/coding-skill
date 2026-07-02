@@ -257,6 +257,14 @@ blocking_issues:
 - 输出可供 `dev`、`cr`、`qa`、`dp` 使用的 PRD 和业务模型。
 - 接收其他子代理的高风险澄清问题，并转回用户确认。
 
+### 可调用 skill
+
+- `grill-with-docs`：对高风险需求做文档驱动的轻量澄清
+- `okf-frontmatter`：维护 PRD、ADR、参考文档的 OKF frontmatter
+- `humanai`：把 AI 生成的 PRD/用户故事文本人类化
+- `ai-memory`：读取项目上下文和历史需求约定
+- `prompt-engineering-for-coding`：构造高质量需求澄清 prompt
+
 ### AI 辅助边界
 
 - 可使用 AI 辅助生成 PRD 初稿、业务图表、验收标准。
@@ -346,6 +354,17 @@ blocking_issues:
 - 实现页面、交互、API、后端逻辑、数据库变更和必要测试。
 - 暴露 API 并更新 API 状态。
 - 完成开发自测，并给 `cr`、`qa`、`dp` 提供交付输入。
+
+### 可调用 skill
+
+- `openspec`：新增模块、公共 API/DB/权限变更前对齐方案
+- `mcp-server-dev`：为内部系统/工具编写 MCP Server
+- `codebase-rag`：检索相关代码上下文，辅助实现和定位
+- `ai-memory`：读取项目编码约定、常见错误、最佳实践
+- `anyviz`：数据可视化相关的页面/组件实现
+- `prompt-engineering-for-coding`：构造开发任务 prompt
+- `work-journal`：记录开发过程、决策和上下文
+- `sofagent`：任务复杂或易跑偏时约束行为、拆解任务
 
 ### AI 辅助边界
 
@@ -455,6 +474,14 @@ blocking_issues:
 - 直到联调无阻断点。
 - 完成后产出功能模块提测文件。
 
+### 可调用 skill
+
+- `codebase-rag`：检索变更影响范围和相关代码上下文
+- `ai-memory`：读取常见错误、最佳实践、历史审查教训
+- `prompt-engineering-for-coding`：构造 code review prompt
+- `work-journal`：记录审查过程、关键决策和修复证据
+- `sofagent`：审查范围复杂或易跑偏时约束行为
+
 ### AI 辅助边界
 
 - 可使用 AI 辅助生成审查问题清单、识别受影响范围、检查常见反模式，遵循 `skills/cr/SKILL.md` 中的 AI 辅助审查规范。
@@ -559,6 +586,13 @@ blocking_issues:
 - 管理 bug 生命周期。
 - 组织复测并关闭或重新打开 bug。
 - 所有阻断 bug 清零后，产出功能测试报告和交付验收结论。
+
+### 可调用 skill
+
+- `ai-memory`：读取常见 bug 模式、回归建议、历史测试约定
+- `prompt-engineering-for-coding`：构造测试生成/审查 prompt
+- `work-journal`：记录测试过程、bug 生命周期和验收结论
+- `sofagent`：测试任务复杂或反馈闭环混乱时约束行为
 
 ### AI 辅助边界
 
@@ -670,6 +704,14 @@ reopened
 - 执行或指导生产环境部署。
 - 每次部署完成后，不管是测试环境还是生产环境，都必须输出交付报告。
 - 当部署失败或回滚时，必须输出失败报告或回滚报告。
+
+### 可调用 skill
+
+- `mcp-server-dev`：为部署/可观测性工具编写 MCP Server，接入 opencode
+- `ai-memory`：读取历史部署教训、环境依赖、发布风险
+- `prompt-engineering-for-coding`：构造部署方案/交付报告 prompt
+- `work-journal`：记录部署过程、决策和交付报告
+- `sofagent`：部署流程复杂或风险高时约束行为
 
 ### 监听输入
 
