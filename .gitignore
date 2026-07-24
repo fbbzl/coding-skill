@@ -6,3 +6,6 @@
 
 # Agent workspace rules (local only, per file header)
 AGENTS.md
+
+# Opencode plan mode artifacts
+.omo/
